@@ -1,24 +1,187 @@
-<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<!DOCTYPE html><html><head>
+<title>MASTERY</title>
+<link rel="preload" href="font/Regular-book-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="icon" type="image/x-icon" href="fav.ico">
 
-  <title>The Art Of Pills</title>
-  <link rel="preload" href="/BerkeleyMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="icon" type="image/x-icon" href="img/fav.ico">
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-	.kofi img{margin:0;filter:saturate(1.5)} .kofi img:hover{filter:grayscale(1);}
-*,:before,:after{box-sizing:border-box}body{color:#dbdbdb;background-color:#050505;justify-content:center;margin:0 auto;display:flex}body:before{--line:#ffffff1a;content:"";background:linear-gradient(90deg,var(--line)1px,transparent 2px 10vmin)0 -1vmin/4vmin 4vmin,linear-gradient(var(--line)1px,transparent 1px 10vmin)0 -5vmin/4vmin 4vmin;z-index:-1;width:100vw;height:100vh;position:fixed;top:0;transform:translateZ(-100vmin);-webkit-mask:linear-gradient(-2deg,#0000 10%,#eaeaea6e);mask:linear-gradient(-2deg,#0000 10%,#eaeaea6e)}article{box-sizing:border-box;background-color:#030303;width:65rem}img{max-width:100%;margin:12px auto 24px;display:block}p{margin-top:18px;margin-bottom:18px;font-size:1rem;font-weight:500;line-height:1.3rem}.wallet{font-weight:600}h2>a{font-size:16px}body:not(a){text-align:left}a{word-break:break-all;color:#0074de;text-decoration-skip-ink:none;text-decoration-thickness:1px}a:hover{color:#ff642d}p>a{margin-bottom:1rem}blockquote>a{font-size:14px;font-weight:600}@media screen and (max-width:864px){article{width:95%}img{width:auto;height:auto}}@font-face{font-family:CPMono_v07 Plain;src:url(CPMono_v07_Plain.woff2)format("woff2");font-display:block}*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-size-adjust:none;font-optical-sizing:none;font-family:CPMono_v07 Plain;font-kerning:none!important;font-stretch:100%!important}strong{text-transform:lowercase}#disclaimer{text-transform:uppercase}h1{text-transform:uppercase;margin-top:40px;margin-bottom:0;font-size:2.5rem}h2{text-align:left;margin-top:64px;margin-bottom:0;font-size:2rem}h4{text-align:left;margin:0}blockquote{text-align:left;border:1px solid #424242;margin-left:0;margin-right:0;padding:14px}article{text-wrap:pretty;border-left:1px solid #1d1d1d;border-right:1px solid #1d1d1d;padding:0 24px 32px}.header{margin-bottom:40px}.imp{color:#ff642d;font-weight:700;display:inline-block}ul{list-style:decimal}ul li{margin-top:8px}.header>p{margin:2px 0 0}.links{margin-bottom:14px}.links>a{text-transform:uppercase;margin-bottom:10px;font-size:1.1rem;display:inline}.links>a:nth-child(2){margin-left:18px}.donatebtn{color:#fff;background:#ff642d;border:1px solid #ff642d;justify-content:center;align-items:center;width:120px;height:36px;padding:0 6px;text-decoration:none;display:flex;position:relative}.donatebtn-text{text-shadow:-1px -1px #000,1px -1px #000,-1px 1px #000,1px 1px #000;font-size:1.05rem;font-weight:400}.donatebtn:hover{color:#ededed;background:#000;border:1px solid #ededed}.altdonatebtn{background:#000}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+      margin: 0px;
+      margin: 0 auto;
+      background-color: #0F0F0F;
+	  color:#dbdbdb;
+      display:flex;
+      justify-content: center;
+	  height:100vh;
+    }
+
+    article {
+      width: 768px;
+	  display:grid;
+      background-color: #0B0B0B;
+      box-sizing: border-box;
+	  align-self:center;
+	  text-align:justify;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+	  margin-top:12px;
+	  margin-bottom:24px;
+      display: block;
+    }
+
+    p {
+      	font-size: 1.1rem;
+      	margin-top:8px;
+      	margin-bottom:18px;
+      	font-weight: 500;
+      	line-height: 1.25rem;
+    }
+    .wallet{font-weight: 600;}
+    h2>a{font-size: 18px;}
+    body:not(a) {
+      text-align: left;
+    }
+
+    a {
+      word-break: break-all;
+      color:#be0032;
+    }
+    blockquote > a{ font-size:18px; font-weight:600;}
+
+    @media screen and (max-width: 864px) {
+      article {
+        width: 95%;
+      }
+	  img{ width:auto; height:auto;}
+    }
+	@supports (-webkit-appearance:none) {
+		p{
+			font-size:18px;
+		}
+	}
+	@supports(content-visibility:auto){
+		p,img{
+			content-visibility: auto;
+			contain-intrinsic-size:958px 300px;
+		}
+	}
+    @font-face {
+      	font-family: "Regular book";
+      	src: url("fonts/Regular-book-webfont.woff2") format('woff2');
+    }
+    * {
+      	font-family: "Regular book";
+		-moz-text-size-adjust: none;
+  		-webkit-text-size-adjust: none;
+  		text-size-adjust: none;
+  		font-stretch: normal!important;
+  		font-optical-sizing:none;
+  		font-kerning: none!important;
+    }
+    strong {
+     	text-transform: lowercase;
+    }
+
+    #disclaimer {
+     	text-transform: uppercase;
+    }
+    h1 {
+    	font-size: 2.5rem;
+    	margin-bottom: 18px;
+		margin-top:24px;
+		text-transform:uppercase;
+    }
+    h2 {
+    	font-size: 2rem;
+   		margin-bottom: 0px;
+    	text-align: left;
+		margin-top:64px;
+    }
+    h4{margin:0px;text-align: left;}
+    blockquote{
+		text-align: left;
+		margin-left: 0px;
+		padding: 5px;
+		border: 1px solid #424242;
+  		padding: 14px;
+	}
+    article{
+		padding:18px;
+		padding-top:0px;
+		border:1px solid #424242;
+	}
+	.header{
+		margin-bottom:40px;
+	}
+	.imp{
+		background-color:#be0032;
+		font-weight:bold;
+		padding:6px;
+		display: inline-block;
+	}
+	ul{
+		list-style: decimal;
+	}
+	ul li {
+ 		 margin-top: 8px;
+	}
+	.header>p{
+	 margin:0px;
+	 margin-top:2px;
+	}
+	.links{
+		margin-bottom:18px;
+	}
+	.links>a{
+	 margin-bottom:10px;
+ 	 display: inline;
+	 text-transform: uppercase;
+	 font-size:1.1rem;
+	}
+	.links>a:nth-child(2){
+		margin-left:18px;
+	}
+	.donatebtn{
+		display: flex;
+		height: 36px;
+		background: #ff642d;
+		padding: 0 6px;
+		position: relative;
+		width: 120px;
+		margin-top: 20px;
+		color: #fff;
+		border: 1px solid #ff642d;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+	}
+	.donatebtn-text{
+
+	}
+	.donatebtn:hover {
+    background: #000;
+    color: #ededed;d
+    border: 1px solid #ff0000;
+	}
   </style>
+<script async="" src="js/um.js" data-website-id="b21934c7-ef4c-4c60-8297-faafefe9af62" crossorigin="anonymous"></script>
 </head>
 <body>
-  <article>
-  	<div class="header">
-    	<h1>THE ART OF PILLS - BY <a href="https://x.com/schizobeyond">ADAM</a></h1>
-		<p></p>
-    	<p></p>
-	</div>
-		<a class="donatebtn altdonatebtn" target="_blank" href="https://oxapay.com/donate/56429419"><div class="donatebtn-text">Crypto</div></a>
-	</div>
+<article>
+<h1>MASTERY</h1>
 	
+<p> The world around us is <a href="https://en.wikipedia.org/wiki/Susan_Lindquist#Awards_and_honors">Susan Lindquist</a>  more complex than we can possibly imagine. with our limited senses and consciousness, we only glimpse a small portion of reality . furthermore, everything in the universe is in a state of constant flux
+</p>
+
+	
+<p style="padding-top:6px;border-top:1px solid #424242">
+BEYOND
+</p>
+</article>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" data-cf-beacon="{" rayid":"86356715d907b748","r":1,"version":"2024.2.4","token":"5a92a6b9ef3a4472932448a2e2e6ddb0"}"="" crossorigin="anonymous"></script>
+
 </body></html>
