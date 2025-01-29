@@ -1,187 +1,133 @@
-<!DOCTYPE html><html><head>
-<title>MASTERY</title>
-<link rel="preload" href="font/fonts/BerkeleyMono-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="icon" type="image/x-icon" href="fav.ico">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MASTERY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="fav.ico">
+    <style>
+        @font-face {
+            font-family: "Berkeley Mono";
+            /* Fixed the font path - make sure this matches your actual directory structure */
+            src: url("./font/fonts/BerkeleyMono-Regular.woff2") format('woff2');
+            font-display: swap;
+            font-weight: normal;
+            font-style: normal;
+        }
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    body {
-      margin: 0px;
-      margin: 0 auto;
-      background-color: #0F0F0F;
-	  color:#dbdbdb;
-      display:flex;
-      justify-content: center;
-	  height:100vh;
-    }
+        :root {
+            --background-primary: #0F0F0F;
+            --background-secondary: #0B0B0B;
+            --text-primary: #dbdbdb;
+            --border-color: #424242;
+            --accent-color: #be0032;
+            --donate-button: #ff642d;
+        }
 
-    article {
-      width: 768px;
-	  display:grid;
-      background-color: #0B0B0B;
-      box-sizing: border-box;
-	  align-self:center;
-	  text-align:justify;
-    }
+        * {
+            /* Changed from "Berkeley Mono" to match your original "Regular book" */
+            font-family: "Regular book", "Berkeley Mono", monospace;
+            text-size-adjust: none;
+            font-stretch: normal !important;
+            font-optical-sizing: none;
+            font-kerning: none !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    img {
-      max-width: 100%;
-      margin: 0 auto;
-	  margin-top:12px;
-	  margin-bottom:24px;
-      display: block;
-    }
+        /* Rest of the CSS remains the same */
+        body {
+            background-color: var(--background-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 1rem;
+        }
 
-    p {
-      	font-size: 1.1rem;
-      	margin-top:8px;
-      	margin-bottom:18px;
-      	font-weight: 500;
-      	line-height: 1.25rem;
-    }
-    .wallet{font-weight: 600;}
-    h2>a{font-size: 18px;}
-    body:not(a) {
-      text-align: left;
-    }
+        article {
+            width: 768px;
+            background-color: var(--background-secondary);
+            border: 1px solid var(--border-color);
+            padding: 1.125rem;
+            padding-top: 0;
+        }
 
-    a {
-      word-break: break-all;
-      color:#be0032;
-    }
-    blockquote > a{ font-size:18px; font-weight:600;}
+        h1 {
+            font-size: 2.5rem;
+            margin: 1.5rem 0 1.125rem;
+            text-transform: uppercase;
+        }
 
-    @media screen and (max-width: 864px) {
-      article {
-        width: 95%;
-      }
-	  img{ width:auto; height:auto;}
-    }
-	@supports (-webkit-appearance:none) {
-		p{
-			font-size:18px;
-		}
-	}
-	@supports(content-visibility:auto){
-		p,img{
-			content-visibility: auto;
-			contain-intrinsic-size:958px 300px;
-		}
-	}
-    @font-face {
-      	font-family: "Regular book";
-      	src: url("fonts/fonts/BerkeleyMono-Regular.woff2") format('woff2');
-    }
-    * {
-      	font-family: "Regular book";
-		-moz-text-size-adjust: none;
-  		-webkit-text-size-adjust: none;
-  		text-size-adjust: none;
-  		font-stretch: normal!important;
-  		font-optical-sizing:none;
-  		font-kerning: none!important;
-    }
-    strong {
-     	text-transform: lowercase;
-    }
+        h2 {
+            font-size: 2rem;
+            margin-top: 4rem;
+            margin-bottom: 0;
+            text-align: left;
+        }
 
-    #disclaimer {
-     	text-transform: uppercase;
-    }
-    h1 {
-    	font-size: 2.5rem;
-    	margin-bottom: 18px;
-		margin-top:24px;
-		text-transform:uppercase;
-    }
-    h2 {
-    	font-size: 2rem;
-   		margin-bottom: 0px;
-    	text-align: left;
-		margin-top:64px;
-    }
-    h4{margin:0px;text-align: left;}
-    blockquote{
-		text-align: left;
-		margin-left: 0px;
-		padding: 5px;
-		border: 1px solid #424242;
-  		padding: 14px;
-	}
-    article{
-		padding:18px;
-		padding-top:0px;
-		border:1px solid #424242;
-	}
-	.header{
-		margin-bottom:40px;
-	}
-	.imp{
-		background-color:#be0032;
-		font-weight:bold;
-		padding:6px;
-		display: inline-block;
-	}
-	ul{
-		list-style: decimal;
-	}
-	ul li {
- 		 margin-top: 8px;
-	}
-	.header>p{
-	 margin:0px;
-	 margin-top:2px;
-	}
-	.links{
-		margin-bottom:18px;
-	}
-	.links>a{
-	 margin-bottom:10px;
- 	 display: inline;
-	 text-transform: uppercase;
-	 font-size:1.1rem;
-	}
-	.links>a:nth-child(2){
-		margin-left:18px;
-	}
-	.donatebtn{
-		display: flex;
-		height: 36px;
-		background: #ff642d;
-		padding: 0 6px;
-		position: relative;
-		width: 120px;
-		margin-top: 20px;
-		color: #fff;
-		border: 1px solid #ff642d;
-		align-items: center;
-		justify-content: center;
-		text-decoration: none;
-	}
-	.donatebtn-text{
+        p {
+            font-size: 1.1rem;
+            line-height: 1.25;
+            margin: 0.5rem 0 1.125rem;
+            text-align: justify;
+        }
 
-	}
-	.donatebtn:hover {
-    background: #000;
-    color: #ededed;d
-    border: 1px solid #ff0000;
-	}
-  </style>
-<script async="" src="js/um.js" data-website-id="b21934c7-ef4c-4c60-8297-faafefe9af62" crossorigin="anonymous"></script>
+        a {
+            color: var(--accent-color);
+            word-break: break-all;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .donate-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 36px;
+            width: 120px;
+            margin-top: 1.25rem;
+            background: var(--donate-button);
+            color: #fff;
+            border: 1px solid var(--donate-button);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .donate-btn:hover {
+            background: #000;
+            color: #ededed;
+            border-color: #ff0000;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 864px) {
+            article {
+                width: 100%;
+            }
+        }
+
+        @supports (content-visibility: auto) {
+            p, img {
+                content-visibility: auto;
+                contain-intrinsic-size: 958px 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-<article>
-<h1>MASTERY</h1>
-	
-<p> The world around us is <a href="https://en.wikipedia.org/wiki/Susan_Lindquist#Awards_and_honors">Susan Lindquist</a>  more complex than we can possibly imagine. with our limited senses and consciousness, we only glimpse a small portion of reality . furthermore, everything in the universe is in a state of constant flux
-</p>
-
-	
-<p style="padding-top:6px;border-top:1px solid #424242">
-BEYOND
-</p>
-</article>
-<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" data-cf-beacon="{" rayid":"86356715d907b748","r":1,"version":"2024.2.4","token":"5a92a6b9ef3a4472932448a2e2e6ddb0"}"="" crossorigin="anonymous"></script>
-
-</body></html>
+    <article>
+        <h1>MASTERY</h1>
+        
+        <p>The world around us is <a href="https://en.wikipedia.org/wiki/Susan_Lindquist#Awards_and_honors">Susan Lindquist</a> more complex than we can possibly imagine. With our limited senses and consciousness, we only glimpse a small portion of reality. Furthermore, everything in the universe is in a state of constant flux.</p>
+        
+        <p style="padding-top: 6px; border-top: 1px solid var(--border-color)">BEYOND</p>
+    </article>
+</body>
+</html>
