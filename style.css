@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "Berkeley Mono";
+    src: url("./fonts/BerkeleyMono-Regular.woff2") format('woff2');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Berkeley Mono";
+    src: url("./fonts/BerkeleyMono-Bold.woff2") format('woff2');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --background-primary: #0F0F0F;
+    --background-secondary: #0B0B0B;
+    --text-primary: #dbdbdb;
+    --text-muted: #888888;
+    --border-color: #424242;
+    --accent-color: #be0032;
+}
+
+* {
+    font-family: "Berkeley Mono", monospace;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    font-stretch: normal !important;
+    font-optical-sizing: none;
+    font-kerning: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1.5rem 1rem;
+}
+
+article {
+    width: 100%;
+    max-width: 960px;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    padding: 1.125rem;
+    padding-top: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 1.5rem 0 1.125rem;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    display: block;
+    flex-shrink: 0;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin-top: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin: 0.5rem 0 1.125rem;
+    text-align: justify;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: var(--accent-color);
+    word-break: break-all;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.post-date {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+}
+
+.back-link {
+    display: inline-block;
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1rem;
+}
+
+/* Post reader typography */
+.article-body {
+    margin-top: 1.25rem;
+}
+
+.article-body h1, .article-body h2, .article-body h3 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.article-body h3 {
+    font-size: 1.3rem;
+}
+
+.article-body pre {
+    background: #000;
+    border: 1px solid var(--border-color);
+    padding: 0.85rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+.article-body code {
+    color: #e5e5e5;
+}
+
+.article-body blockquote {
+    border-left: 2px solid var(--accent-color);
+    padding-left: 0.85rem;
+    margin: 1rem 0;
+    color: #bbb;
+}
+
+.article-body ul, .article-body ol {
+    margin: 0.75rem 0 1rem 1.5rem;
+    line-height: 1.4;
+}
+
+.article-body li {
+    margin-bottom: 0.35rem;
+}
+
+.footer-line {
+    padding-top: 8px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* Phone and Mobile Optimizations */
+@media screen and (max-width: 640px) {
+    body {
+        padding: 0.5rem;
+        align-items: flex-start;
+    }
+
+    article {
+        padding: 0.85rem;
+        border-left: none;
+        border-right: none;
+    }
+
+
+    .profile-header {
+        gap: 1rem;
+        margin: 1rem 0 1rem;
+    }
+
+    .profile-avatar {
+        width: 65px;
+        height: 65px;
+    }
+
+    h2 {
+        margin-top: 2.25rem;
+    }
+
+    p {
+        font-size: 0.98rem;
+        text-align: left;
+        line-height: 1.4;
+    }
+
+    .footer-line {
+        margin-top: 2rem;
+        flex-direction: column;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+    }
+}
