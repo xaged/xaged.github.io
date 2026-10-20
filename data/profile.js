@@ -10,7 +10,7 @@ const PROFILE_DATA = {
   interests: `RE / C / Bioinformatics / OSINT / Real-Time Systems / x64 ASM`,
 
   // About / Background
-  about: `My biggest work/contribution has primarily revolved around project blackglass, exploring deterministic execution under resource contention, alongside resolving execution bottlenecks and latency issues within the system. My interests lie in the less visible layers of system behavior anomalies, performance instability. If you would like to know more about my work feel free to reach me out.`,
+  about: `hi, im just deeply curious about how things work, i'll keep things minimal as possible here related what i've done in both com and various forums/web3 communities, my biggest work/contribution has primarily revolved around project blackglass, exploring deterministic execution under resource contention, alongside resolving execution bottlenecks and latency issues within the system. if you would like to know more about my work feel free to reach me out.`,
 
   // Articles I liked reading
   readings: [
