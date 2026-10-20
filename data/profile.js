@@ -7,7 +7,7 @@ const PROFILE_DATA = {
   avatar: "assets/avatar.png",
   
   // Focus areas
-  interests: `Chaos Theory / Bioinformatics / Real-Time Systems / ×64 ASM / RE / C / C#`,
+  interests: `RE / C / Bioinformatics / OSINT / Real-Time Systems / x64 ASM`,
 
   // Articles I liked reading
   readings: [

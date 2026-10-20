@@ -90,14 +90,12 @@ const App = {
         <p><a href="#" class="back-link">← BACK</a></p>
         <h1>404 NOT FOUND</h1>
         <p>This essay does not exist.</p>
-        <div class="footer-line"><a href="#">← BACK</a> <span>${profile.name || 'S\u039BIF'}</span></div>
       `;
       return;
     }
 
     const contentHtml = window.MarkdownParser ? window.MarkdownParser.render(post.content) : post.content;
 
-    // Inside post reading view: NO quote, only back button and author name
     root.innerHTML = `
       <p><a href="#" class="back-link">← BACK</a></p>
       <h1>${post.title}</h1>
@@ -105,11 +103,6 @@ const App = {
       
       <div class="article-body">
         ${contentHtml}
-      </div>
-
-      <div class="footer-line">
-        <a href="#">← BACK</a>
-        <span>${profile.name || 'S\u039BIF'}</span>
       </div>
     `;
 
