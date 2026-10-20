@@ -30,8 +30,8 @@ const App = {
         <h1>${profile.name || 'S\u039BIF'}</h1>
       </div>
 
-      ${profile.bio ? `<p>${profile.bio}</p>` : ''}
       ${profile.interests ? `<p>${profile.interests}</p>` : ''}
+      ${profile.about ? `<p>${profile.about}</p>` : ''}
 
       <h2>BLOG</h2>
     `;
